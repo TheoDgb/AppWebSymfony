@@ -3,6 +3,7 @@
 ## Objectif du projet :
 
 Développer une application web en Symfony qui permet aux utilisateurs de créer, gérer, s'inscrire et participer à des événements.
+Cours / Projet sur : https://bright-caption-38d.notion.site/D-veloppement-d-une-application-web-Symfony-892a5cb49a824525b3adf1d1660af9cf
 
 ## Installation et Configuration de Symfony
 
@@ -67,3 +68,12 @@ Développer une application web en Symfony qui permet aux utilisateurs de créer
 
     // pour créer un controller
     php bin/console make:controller AccueilController
+
+    // pour créer une entité
+    php bin/console make:entity
+
+    // pour mettre à jour la base de données : générer des migrations
+    php bin/console make:migration
+
+    // pour exécuter les migrations
+    php bin/console doctrine:migrations:migrate
