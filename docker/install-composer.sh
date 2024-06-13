@@ -1,30 +1,19 @@
-# projet : ~/Documents/GitHub/AppWebSymphony/my_project_name
+# projet : ~/Documents/GitHub/AppWebSymphony/AppWebSymfonyProject
 
 # https://bright-caption-38d.notion.site/D-veloppement-d-une-application-web-Symfony-892a5cb49a824525b3adf1d1660af9cf
-
-# mettre les droits à un fchier :
-# chmod 777 /home/theo/PhpstormProjects/untitled/my_project_name/src/DataFixtures/ProductFixtures.php
 
 # si ca lance pas :
 # sudo lsof -i -P -n | grep LISTEN | grep 3306
 # sudo service mysql stop
 
-# dans untitled :
-# sudo docker compose up -d --build
-# sudo docker exec -it projet_symfony_php bash
-# wget https://get.symfony.com/cli/installer -O - | bash
-# export PATH="$HOME/.symfony5/bin:$PATH"
-# dans root@7e81d466a1a1:/var/www/my_project_name# (cd my_project_name/)
-# symfony server:start
 
-# pour pouvoir créer un controlleur :
-# composer require symfony/maker-bundle --dev
 
-# pour installer le bundle twig :
-# composer require symfony/twig-bundle
 
-# installer le package Doctrine ORM :
-# composer require symfony/orm-pack
+
+
+
+
+
 
 # vérifier la connexion à la bdd (param dans docker-compose.yml)
 # php bin/console doctrine:schema:validate

@@ -1,5 +1,9 @@
 # AppWebSymfony
 
+## Objectif du projet :
+
+Développer une application web en Symfony qui permet aux utilisateurs de créer, gérer, s'inscrire et participer à des événements.
+
 ## Installation et Configuration de Symfony
 
 ### Configuration de l'environnement avec une image Docker
@@ -17,13 +21,16 @@
     (pour arrêter : sudo docker compose down)
 
 ### Création d'un projet Symfony
+    // Se connecter au container php
     sudo docker exec -it project_symfony_php bash
+    // Créer un projet Symfony
     composer create-project symfony/skeleton AppWebSymfonyProject
     
     (pour le supprimer : rm -rf /var/www/AppWebSymfonyProject)
 
 ### Lancer le serveur web local de Symfony
-    sudo docker exec -it project_symfony_php bash
+    (lancer l'env docker sudo docker compose up -d --build)
+    // dans le container php
     wget https://get.symfony.com/cli/installer -O - | bash
     export PATH="$HOME/.symfony5/bin:$PATH"
     
@@ -33,6 +40,30 @@
     http://127.0.0.1:8000/
 
 ### Configuration de la base de données
-    // Mettre les droits d'écriture sur le fichier .env
+    // mettre les droits d'écriture sur le fichier .env
     sudo chmod 777 .env
-    DATABASE_URL="mysql://root:root@mysql:3306/symfonyprojectdb"
+    // on utilise SQLite pour la base de données donc dans .env
+    DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
+    // vérifier la connexion à la base de données
+    php bin/console doctrine:schema:validate
+
+### Installations nécessaires
+    // dans le container php
+
+    // donner tous les droits (lecture, écriture et exécution) à tous les fichiers et sous-dossiers du répertoire AppWebSymfonyProject
+    chmod -R 777 /var/www/AppWebSymfonyProject
+
+    // pour créer un controller
+    composer require symfony/maker-bundle --dev
+
+    // pour installer le bundle twig
+    composer require symfony/twig-bundle
+
+    // installer le package Doctrine ORM
+    composer require symfony/orm-pack
+
+### Commandes utiles
+    // dans le container php
+
+    // pour créer un controller
+    php bin/console make:controller AccueilController

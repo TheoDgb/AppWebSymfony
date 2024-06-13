@@ -1,0 +1,30 @@
+{# templates/accueil/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1><strong>Bienvenue sur la page d'accueil de ce projet Symfony !</strong></h1>
+                <br><br>
+                <h3>Accueil</h3>
+                <p>Vue générale des événements disponibles.</p>
+                <br>
+                <h3>Créer Événement</h3>
+                <p>Formulaire de création d’événements.</p>
+                <br>
+                <h3>Liste des Événements</h3>
+                <p>Vue listant tous les événements avec options de filtrage.</p>
+                <br>
+                <h3>Inscriptions</h3>
+                <p>Liste des événements auxquels l'utilisateur est inscrit.</p>
+                <br>
+                <h3>Profil Utilisateur</h3>
+                <p>Détails et édition des informations utilisateur.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
