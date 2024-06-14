@@ -1,0 +1,23 @@
+{# templates/createEvent/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer Événement{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1><strong>Créer Événement</strong></h1>
+                <br><br>
+                <h3>Formulaire de création d’événements.</h3>
+                <br>
+                <h1>Créer un événement</h1>
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                <button class="btn btn-primary">Créer</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

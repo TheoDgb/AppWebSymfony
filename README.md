@@ -63,6 +63,9 @@ Cours / Projet sur : https://bright-caption-38d.notion.site/D-veloppement-d-une-
     // installer le package Doctrine ORM
     composer require symfony/orm-pack
 
+    // générer un formulaire (EventType)
+    php bin/console make:form EventType
+
 ### Commandes utiles
     // dans le container php
 
@@ -77,3 +80,6 @@ Cours / Projet sur : https://bright-caption-38d.notion.site/D-veloppement-d-une-
 
     // pour exécuter les migrations
     php bin/console doctrine:migrations:migrate
+
+    // pour générer un formulaire
+    composer require form validator

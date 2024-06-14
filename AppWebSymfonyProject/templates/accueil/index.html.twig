@@ -7,8 +7,26 @@
 {% block body %}
     <div class="container">
         <div class="row">
+            {% for event in events %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ event.title }}</h5>
+                        <p class="card-text">{{ event.description }}</p>
+                        <p class="card-text"><small class="text-muted">{{ event.dateTime|date('d-m-Y H:i') }}</small></p>
+                        <p class="card-text"><strong>Participants maximum:</strong> {{ event.maxParticipants }}</p>
+                        <a href="{{ path('event_detail', {'id': event.id}) }}" class="btn btn-primary">Voir les détails</a>
+                    </div>
+                </div>
+            </div>
+            {% if loop.index % 4 == 0 %}
+        </div><div class="row">
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="row">
             <div class="col-md-12">
-                <h1><strong>Bienvenue sur la page d'accueil de ce projet Symfony !</strong></h1>
                 <br><br>
                 <h3>Accueil</h3>
                 <p>Vue générale des événements disponibles.</p>
