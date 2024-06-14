@@ -63,8 +63,14 @@ Cours / Projet sur : https://bright-caption-38d.notion.site/D-veloppement-d-une-
     // installer le package Doctrine ORM
     composer require symfony/orm-pack
 
-    // générer un formulaire (EventType)
-    php bin/console make:form EventType
+    // pour générer un formulaire
+    composer require form validator 
+
+    // pour la gestion de la sécurité
+    composer require symfony/security-bundle
+    composer require symfony/validator
+    composer require symfony/form
+    composer require symfony/mailer
 
 ### Commandes utiles
     // dans le container php
@@ -81,5 +87,18 @@ Cours / Projet sur : https://bright-caption-38d.notion.site/D-veloppement-d-une-
     // pour exécuter les migrations
     php bin/console doctrine:migrations:migrate
 
-    // pour générer un formulaire
-    composer require form validator
+    //vérif le contenu d'une table (event)
+    php bin/console doctrine:query:sql "SELECT * FROM event"
+
+    // générer un formulaire (EventType)
+    php bin/console make:form EventType
+
+    // pour créer un formulaire de connexion
+    php bin/console make:auth
+
+    // pour créer un formulaire d'inscription
+    php bin/console make:registration-form
+
+
+### Configurtion de la sécurité
+    // Dans le fichier security.yaml

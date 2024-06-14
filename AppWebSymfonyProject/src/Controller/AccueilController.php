@@ -18,12 +18,4 @@ class AccueilController extends AbstractController
             'events' => $events,
         ]);
     }
-
-    #[Route('/event/{id}', name: 'event_detail')]
-    public function eventDetail(Event $event): Response
-    {
-        return $this->render('event/detail.html.twig', [
-            'event' => $event,
-        ]);
-    }
 }

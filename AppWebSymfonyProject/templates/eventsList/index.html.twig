@@ -11,6 +11,26 @@
                 <h1><strong>Liste des Événements</strong></h1>
                 <br><br>
                 <h3>Vue listant tous les événements avec options de filtrage.</h3>
+                <br>
+                <div class="row">
+                    {% for event in events %}
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <h3 class="card-header"><strong>{{ event.title }}</strong></h3>
+                                <div class="card-body">
+                                    <h4 class="card-title"><strong>Détails</strong></h4>
+                                    <p class="card-text"><strong>Description de l'événement:</strong><br>{{ event.description }}</p>
+                                    <p class="card-text"><strong>Date & Horaire:</strong> {{ event.dateTime|date('d-m-Y H:i') }}</p>
+                                    <p class="card-text"><strong>Participants maximum:</strong> {{ event.maxParticipants }}</p>
+                                    <p class="card-text"><strong>Événement public:</strong> {{ event.isPublic ? 'Oui' : 'Non' }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% if loop.index % 4 == 0 %}
+                </div><div class="row">
+                    {% endif %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>

@@ -7,8 +7,7 @@
 # charger fixtures :
 # php bin/console doctrine:fixtures:load
 
-# vérif le contenu de la table product :
-# php bin/console doctrine:query:sql "SELECT * FROM product"
+
 
 
 

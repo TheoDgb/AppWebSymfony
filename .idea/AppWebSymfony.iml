@@ -4,6 +4,8 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/src" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/tests" isTestSource="true" packagePrefix="App\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/doctrine/cache" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/doctrine/collections" />
@@ -19,13 +21,16 @@
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/doctrine/orm" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/doctrine/persistence" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/doctrine/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/egulias/email-validator" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/psr/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/psr/clock" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/psr/container" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/psr/event-dispatcher" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/cache" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/cache-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/clock" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/config" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/console" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/dependency-injection" />
@@ -42,10 +47,14 @@
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/framework-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/http-foundation" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/mailer" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/maker-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/mime" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/options-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/password-hasher" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/polyfill-intl-grapheme" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/polyfill-intl-icu" />
+      <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/polyfill-intl-idn" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/polyfill-intl-normalizer" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/polyfill-mbstring" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/polyfill-php83" />
@@ -54,6 +63,10 @@
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/property-info" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/routing" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/runtime" />
+      <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/security-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/security-core" />
+      <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/security-csrf" />
+      <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/security-http" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/service-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/stopwatch" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/string" />
