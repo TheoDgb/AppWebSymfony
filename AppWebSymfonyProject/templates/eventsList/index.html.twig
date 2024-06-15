@@ -23,6 +23,7 @@
                                     <p class="card-text"><strong>Description de l'événement:</strong><br>{{ event.description }}</p>
                                     <p class="card-text"><strong>Date & Horaire:</strong> {{ event.dateTime|date('d-m-Y H:i') }}</p>
                                     <p class="card-text"><strong>Participants maximum:</strong> {{ event.maxParticipants }}</p>
+                                    <p class="card-text"><strong>Places restantes:</strong> {{ event.remainingPlaces }}</p>
                                     <p class="card-text"><strong>Événement public:</strong> {{ event.isPublic ? 'Oui' : 'Non' }}</p>
 
                                     {% if app.user %}

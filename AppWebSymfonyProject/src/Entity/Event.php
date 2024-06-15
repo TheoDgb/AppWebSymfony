@@ -131,6 +131,11 @@ class Event
         return $this->eventRegistrations;
     }
 
+    public function getRemainingPlaces(): int
+    {
+        return $this->getMaxParticipants() - $this->getEventRegistrations()->count();
+    }
+
     public function addEventRegistration(EventRegistration $eventRegistration): static
     {
         if (!$this->eventRegistrations->contains($eventRegistration)) {

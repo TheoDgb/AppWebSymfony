@@ -106,4 +106,4 @@ Cours / Projet sur : https://bright-caption-38d.notion.site/D-veloppement-d-une-
     // Dans le fichier config/package/security.yaml
 
 ### Configuration des voters
-    // Dans le fichier config/package/services.yaml
+    // Dans le fichier config/services.yaml
