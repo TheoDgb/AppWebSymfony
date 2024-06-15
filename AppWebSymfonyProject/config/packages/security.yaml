@@ -1,0 +1,28 @@
+security:
+    providers:
+        database_users:
+            entity:
+                class: App\Entity\User
+                property: email # Utiliser l'email comme propriété d'identification
+    password_hashers:
+        App\Entity\User:  # Utiliser le hasher spécifique à l'entité User
+        #Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface:
+            algorithm: auto
+            cost: 12 # Coût de hachage recommandé pour bcrypt
+    firewalls:
+        main:
+            pattern: ^/
+            custom_authenticator: App\Security\AppCustomAuthenticator
+            form_login:
+                login_path: app_login
+                check_path: app_login
+                default_target_path: app_accueil
+                username_parameter: email # Utiliser email au lieu de username pour le formulaire de login
+            logout:
+                path: app_logout
+                target: app_accueil
+                invalidate_session: true
+            entry_point: form_login
+    access_control:
+        - { path: ^/profile, roles: ROLE_USER } # Accessible uniquement aux utilisateurs connectés
+        - { path: ^/admin, roles: ROLE_ADMIN } # Accessible uniquement aux administrateurs
