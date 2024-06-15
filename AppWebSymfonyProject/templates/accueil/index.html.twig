@@ -6,9 +6,17 @@
 
 {% block body %}
     <div class="container">
+        <h1><strong>Accueil</strong></h1>
+        <br><br>
+        <h3>Vue générale des événements disponibles.</h3>
+        <br>
         <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% set colCounter = 0 %}
             {% for event in events %}
-            {% if event.isPublic or app.user %}
+            {% if (event.isPublic or app.user) and event.remainingPlaces > 0 %}
+            {% if colCounter % 3 == 0 and colCounter != 0 %}
+        </div><div class="row row-cols-1 row-cols-md-3 g-4">
+            {% endif %}
             <div class="col-md-4 mb-4">
                 <div class="card h-100 d-flex align-items-stretch">
                     <h3 class="card-header"><strong>{{ event.title }}</strong></h3>
@@ -20,9 +28,7 @@
                     </div>
                 </div>
             </div>
-            {% endif %}
-            {% if loop.index % 3 == 0 %}
-        </div><div class="row">
+            {% set colCounter = colCounter + 1 %}
             {% endif %}
             {% endfor %}
         </div>
