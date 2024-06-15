@@ -31,6 +31,10 @@ class Event
     #[ORM\Column]
     private ?bool $isPublic = null;
 
+    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'events')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?User $user = null;
+
     /**
      * @var Collection<int, EventRegistration>
      */
@@ -103,6 +107,18 @@ class Event
     public function setIsPublic(bool $isPublic): static
     {
         $this->isPublic = $isPublic;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }

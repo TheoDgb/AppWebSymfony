@@ -1,16 +1,16 @@
-{# templates/createEvent/index.html.twig #}
+{# templates/eventsList/edit.html.twig #}
 
 {% extends 'base.html.twig' %}
 
-{% block title %}Créer Événement{% endblock %}
+{% block title %}Modifier Événement{% endblock %}
 
 {% block body %}
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1><strong>Créer Événement</strong></h1>
+                <h1><strong>Modifier Événement</strong></h1>
                 <br><br>
-                <h3>Formulaire de création d’événements.</h3>
+                <h3>Formulaire de modification d’événement.</h3>
                 <br>
                 {{ form_start(form) }}
 
@@ -44,7 +44,7 @@
                     {{ form_errors(form.isPublic) }}
                 </div>
 
-                <button class="btn btn-primary">Créer</button>
+                <button class="btn btn-primary">Enregistrer</button>
 
                 {{ form_end(form) }}
             </div>

@@ -12,10 +12,11 @@
                 <br><br>
                 <h3>Vue listant tous les événements avec options de filtrage.</h3>
                 <br>
-                <div class="row">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
                     {% for event in events %}
+                    {% if event.isPublic or app.user %}
                         <div class="col-md-4 mb-4">
-                            <div class="card">
+                            <div class="card h-100 d-flex align-items-stretch">
                                 <h3 class="card-header"><strong>{{ event.title }}</strong></h3>
                                 <div class="card-body">
                                     <h4 class="card-title"><strong>Détails</strong></h4>
@@ -23,10 +24,35 @@
                                     <p class="card-text"><strong>Date & Horaire:</strong> {{ event.dateTime|date('d-m-Y H:i') }}</p>
                                     <p class="card-text"><strong>Participants maximum:</strong> {{ event.maxParticipants }}</p>
                                     <p class="card-text"><strong>Événement public:</strong> {{ event.isPublic ? 'Oui' : 'Non' }}</p>
+
+                                    {% if app.user %}
+                                        {% set isRegistered = false %}
+                                        {% for registration in event.eventRegistrations %}
+                                            {% if registration.user == app.user %}
+                                                {% set isRegistered = true %}
+                                            {% endif %}
+                                        {% endfor %}
+
+                                        {% if isRegistered %}
+                                            <a href="{{ path('event_unregister', {'id': event.id}) }}" class="btn btn-danger">Se désinscrire</a>
+                                        {% else %}
+                                            <a href="{{ path('event_register', {'id': event.id}) }}" class="btn btn-primary">S'inscrire</a>
+                                        {% endif %}
+                                    {% else %}
+                                        <a href="{{ path('app_login') }}" class="btn btn-primary">S'inscrire</a>
+                                    {% endif %}
+
+                                    {% if app.user and event.user == app.user %}
+                                        <br><br>
+                                        <a href="{{ path('event_edit', {'id': event.id}) }}" class="btn btn-warning">Modifier l'événement</a>
+                                        <br><br>
+                                        <a href="{{ path('event_delete', {'id': event.id}) }}" class="btn btn-danger">Supprimer l'événement</a>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
-                    {% if loop.index % 4 == 0 %}
+                    {% endif %}
+                    {% if loop.index % 3 == 0 %}
                 </div><div class="row">
                     {% endif %}
                     {% endfor %}

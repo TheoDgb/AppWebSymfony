@@ -99,6 +99,11 @@ Cours / Projet sur : https://bright-caption-38d.notion.site/D-veloppement-d-une-
     // pour créer un formulaire d'inscription
     php bin/console make:registration-form
 
+    // pour voir toutes les tables
+    php bin/console doctrine:query:sql "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;"
 
 ### Configurtion de la sécurité
-    // Dans le fichier security.yaml
+    // Dans le fichier config/package/security.yaml
+
+### Configuration des voters
+    // Dans le fichier config/package/services.yaml
