@@ -79,6 +79,9 @@
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/var-exporter" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/yaml" />
       <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/twig/twig" />
+      <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/http-client-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/AppWebSymfonyProject/vendor/symfony/mailjet-mailer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

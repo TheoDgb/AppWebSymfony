@@ -72,6 +72,10 @@ Cours / Projet sur : https://bright-caption-38d.notion.site/D-veloppement-d-une-
     composer require symfony/form
     composer require symfony/mailer
 
+    // pour l'envoi de mails va MailJet
+    composer require symfony/mailjet-mailer
+    composer require symfony/http-client
+
 ### Commandes utiles
     // dans le container php
 
@@ -107,3 +111,11 @@ Cours / Projet sur : https://bright-caption-38d.notion.site/D-veloppement-d-une-
 
 ### Configuration des voters
     // Dans le fichier config/services.yaml
+
+### Gestion des mails de validation
+    // Utilisation de MailJet
+    // Dans la section API Key Management
+    // Récupérer l'API KEY et la SECRET KEY
+    // Paramétrer l'.env avec ces clées
+    // Vérifier que Synmfony utilise correctement la configuration de mailer
+    php bin/console debug:config framework mailer

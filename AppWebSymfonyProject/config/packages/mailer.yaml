@@ -1,7 +1,3 @@
-#framework:
-#    mailer:
-#        dsn: '%env(MAILER_DSN)%'
-
 framework:
     mailer:
-        dsn: 'smtp://USERNAME:PASSWORD@smtp.mailjet.com:587?encryption=tls&auth_mode=login'
+        dsn: '%env(MAILER_DSN)%'

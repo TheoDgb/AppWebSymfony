@@ -85,6 +85,9 @@
       <path value="$PROJECT_DIR$/AppWebSymfonyProject/vendor/symfony/mailer" />
       <path value="$PROJECT_DIR$/AppWebSymfonyProject/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/AppWebSymfonyProject/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/AppWebSymfonyProject/vendor/symfony/mailjet-mailer" />
+      <path value="$PROJECT_DIR$/AppWebSymfonyProject/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/AppWebSymfonyProject/vendor/symfony/http-client" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
