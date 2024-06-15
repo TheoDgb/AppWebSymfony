@@ -1,0 +1,26 @@
+{# templates/userProfile/edit.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier le Profil{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1><strong>Profil Utilisateur</strong></h1>
+                <br><br>
+                <h3>Modifier votre profil</h3>
+                <br>
+
+                {{ form_start(form) }}
+                {{ form_row(form.firstName, { 'label': 'Prénom' }) }}
+                {{ form_row(form.lastName, { 'label': 'Nom' }) }}
+                {{ form_row(form.email, { 'label': 'Email' }) }}
+
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
