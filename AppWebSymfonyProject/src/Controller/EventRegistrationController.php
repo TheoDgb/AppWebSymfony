@@ -29,32 +29,6 @@ class EventRegistrationController extends AbstractController
     /**
      * @throws TransportExceptionInterface
      */
-    /*
-    // test d'envoi de mail /!\ autre que l'expéditeur lui-même car MailJet ne permet pas d'envoyer des emails à soi-même
-    #[Route('/send-test-email', name: 'send_test_email')]
-    public function sendTestEmail(): Response
-    {
-        $toEmail = 'TESTMAIL@TEST.com';
-
-        $this->sendEmail(
-            $this->mailer,
-            $toEmail,
-            'Test d\'envoi d\'email avec Symfony',
-            'Test d\'envoi d\'email avec MailJet',
-        );
-
-        return new Response('Email de test envoyé à ' . $toEmail);
-    }*/
-
-
-
-
-
-
-
-    /**
-     * @throws TransportExceptionInterface
-     */
     private function sendEmail(MailerInterface $mailer, string $to, string $subject, string $body): void
     {
         $email = (new Email())

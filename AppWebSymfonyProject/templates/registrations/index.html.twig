@@ -1,5 +1,3 @@
-{# templates/registrations/index.html.twig #}
-
 {% extends 'base.html.twig' %}
 
 {% block title %}Inscriptions{% endblock %}
@@ -10,8 +8,27 @@
             <div class="col-md-12">
                 <h1><strong>Inscriptions</strong></h1>
                 <br><br>
-                <h3>Liste des événements auxquels l'utilisateur est inscrit.</h3>
+                <h3>Liste des événements auxquels vous êtes inscrit :</h3>
                 <br>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    {% if registrations is not empty %}
+                        {% for registration in registrations %}
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h4 class="card-title"><strong>{{ registration.event.title }}</strong></h4>
+                                        <p class="card-text"><strong>Description :</strong> {{ registration.event.description }}</p>
+                                        <p class="card-text"><strong>Date & Horaire :</strong> {{ registration.event.dateTime|date('d-m-Y H:i') }}</p>
+                                        <p class="card-text"><strong>Événement public :</strong> {{ registration.event.isPublic ? 'Oui' : 'Non' }}</p>
+                                        <a href="{{ path('event_unregister', {'id': registration.event.id}) }}" class="btn btn-danger">Se désinscrire</a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <p>Vous n'êtes inscrit à aucun événement pour le moment.</p>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
