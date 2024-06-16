@@ -13,7 +13,7 @@ Cours / Projet sur : https://bright-caption-38d.notion.site/D-veloppement-d-une-
 2. créer DockerFile
 3. créer docker-compose.yml
 
-### Lancement de l'envirronement Docker
+### Lancement de l'environnement Docker
     sudo docker compose up -d --build
     v
     ✔ Container project_symfony_php  Started
