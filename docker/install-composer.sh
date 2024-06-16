@@ -1,18 +1,3 @@
-# si ca lance pas :
-# sudo lsof -i -P -n | grep LISTEN | grep 3306
-# sudo service mysql stop
-
-###############################
-
-# charger fixtures :
-# php bin/console doctrine:fixtures:load
-
-
-
-
-
-
-
 # docker/install-composer.sh
 
 #
